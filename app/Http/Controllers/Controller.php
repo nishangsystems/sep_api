@@ -12,11 +12,11 @@ use Illuminate\Support\Facades\DB;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    
+
     public function get_schools(Request $request)
     {
         # code...
-        $schools = DB::table('schools')->select(['name', 'api_root', 'logo_path'])->distinct()->get();
+        $schools = DB::table('schools')->select(['id','name', 'api_root', 'logo_path'])->distinct()->get();
         return response()->json(['schools'=>$schools]);
     }
 }

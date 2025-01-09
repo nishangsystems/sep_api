@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class School extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'logo_path', 'api_root'];
+    protected $fillable = ['name', 'logo_path', 'api_root', 'complain_url'];
 }

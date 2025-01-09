@@ -16,7 +16,7 @@ class Controller extends BaseController
     public function get_schools(Request $request)
     {
         # code...
-        $schools = DB::table('schools')->select(['name', 'api_root', 'logo_path'])->distinct()->get();
+        $schools = DB::table('schools')->select(['name', 'api_root', 'logo_path', 'complain_url'])->distinct()->get();
         return response()->json(['schools'=>$schools]);
     }
 }
